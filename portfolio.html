@@ -50,14 +50,37 @@ section{
 /* ===== HERO ===== */
 #home{
   display:flex;
-  flex-direction:column;
   justify-content:center;
   align-items:center;
-  text-align:center;
+  gap:50px;
+  text-align:left;
   color:white;
   background:linear-gradient(135deg,#667eea,#764ba2);
+  flex-wrap:wrap;
+  padding-top:120px;
 }
 
+.hero-text{
+  max-width:500px;
+}
+
+.hero-text h1{
+  font-size:48px;
+  margin-bottom:15px;
+}
+
+.hero-text p{
+  font-size:20px;
+  margin-bottom:20px;
+}
+
+.profile-pic{
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  object-fit:cover;
+  border:5px solid white;
+}
 #home h1{
   font-size:48px;
   margin-bottom:10px;
@@ -177,9 +200,17 @@ footer{
 
 <!-- ===== HOME ===== -->
 <section id="home">
-  <h1>Hello, I'm Harish 👋</h1>
-  <p>Student | Web Developer | Learner</p>
-  <a href="#projects" class="btn">View My Work</a>
+
+  <div class="hero-text">
+    <h1>Hi, I'm Harish 👋</h1>
+    <p>Aspiring Web Developer building modern websites and useful apps.</p>
+
+    <a href="#projects" class="btn">View Projects</a>
+    <a href="#contact" class="btn" style="margin-left:10px;">Contact Me</a>
+  </div>
+
+  <img src="profile.jpg" class="profile-pic">
+
 </section>
 
 <!-- ===== ABOUT ===== -->
@@ -254,4 +285,5 @@ footer{
 </footer>
 
 </body>
+
 </html>
