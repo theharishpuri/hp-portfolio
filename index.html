@@ -181,6 +181,17 @@ footer{
     font-size:32px;
   }
 }
+ /* ===== Animations ===== */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all .8s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
 </style>
 </head>
 
@@ -199,7 +210,7 @@ footer{
 </nav>
 
 <!-- ===== HOME ===== -->
-<section id="home">
+<section id="home" class="reveal">
 
   <div class="hero-text">
     <h1>Hi, I'm Harish 👋</h1>
@@ -214,7 +225,7 @@ footer{
 </section>
 
 <!-- ===== ABOUT ===== -->
-<section id="about">
+<section id="about" class="reveal">
   <h2>About Me</h2>
   <br>
   <p>
@@ -224,7 +235,7 @@ footer{
 </section>
 
 <!-- ===== SKILLS ===== -->
-<section id="skills">
+<section id="skills" class="reveal">
   <h2 style="text-align:center;">Skills</h2>
 
   <div class="skills">
@@ -246,7 +257,7 @@ footer{
 </section>
 
 <!-- ===== PROJECTS ===== -->
-<section id="projects">
+<section id="projects" class="reveal">
   <h2 style="text-align:center;">Projects</h2>
 
   <div class="grid">
@@ -270,7 +281,7 @@ footer{
 </section>
 
 <!-- ===== CONTACT ===== -->
-<section id="contact">
+<section id="contact" class="reveal">
   <h2>Contact Me</h2>
 
   <input placeholder="Your Name"><br>
@@ -283,6 +294,23 @@ footer{
 <footer>
   © 2026 Harish | Built with ❤️ using HTML & CSS
 </footer>
+<script>
+function revealOnScroll(){
+  const reveals = document.querySelectorAll(".reveal");
+
+  reveals.forEach(section => {
+    const windowHeight = window.innerHeight;
+    const elementTop = section.getBoundingClientRect().top;
+
+    if(elementTop < windowHeight - 100){
+      section.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
 
 </body>
 
