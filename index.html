@@ -207,6 +207,54 @@ footer{
   opacity:1;
   transform:translateY(0);
 }
+ .contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 500px;
+    margin: auto;
+}
+
+.email-btn {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 10px 20px;
+    background: #00adb5;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background: #1f1f1f;
+    color: white;
+}
+
+.contact-form button {
+    padding: 10px;
+    background: #00adb5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #007b80;
+}
 </style>
 </head>
 
@@ -302,14 +350,27 @@ footer{
 </section>
 
 <!-- ===== CONTACT ===== -->
-<section id="contact" class="reveal">
-  <h2>Contact Me</h2>
+<section class="contact">
+    <h2>Contact Me</h2>
 
-  <input placeholder="Your Name"><br>
-  <input placeholder="Email"><br>
-  <textarea rows="4" placeholder="Message"></textarea><br>
+    <div class="contact-container">
 
-  <button class="btn">Send</button>
+        <p>If you'd like to work with me or have any questions, feel free to contact me.</p>
+
+        <!-- Email button -->
+        <a href="mailto:theharishpuri@gmail.com" class="email-btn">
+            📧 Send Email
+        </a>
+
+        <!-- Simple form -->
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+    </div>
 </section>
 
 <footer>
